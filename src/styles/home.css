@@ -1,0 +1,204 @@
+/* ===== Home Page ===== */
+
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* --- Toolbar --- */
+.toolbar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fafafa;
+  flex-shrink: 0;
+}
+
+.action-tabs {
+  display: flex;
+  gap: 2px;
+  background: #f0f0f0;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.action-tab {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #777777;
+  text-transform: capitalize;
+}
+
+.action-tab:hover {
+  color: #111111;
+}
+
+.action-tab.active {
+  background: #111111;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.run-btn {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 24px;
+  border: none;
+  border-radius: 6px;
+  background: #111111;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.run-btn:hover {
+  background: #333333;
+}
+
+.run-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* --- Editor panels --- */
+.panels {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+.panel-header {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fafafa;
+  flex-shrink: 0;
+}
+
+.panel-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.panel-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.clear-btn, .copy-btn {
+  font-size: 13px;
+  font-weight: 500;
+  color: #888888;
+  background: none;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.clear-btn:hover {
+  color: #ff4444;
+}
+
+.copy-btn:hover {
+  color: #111111;
+}
+
+.panel-body {
+  flex: 1;
+  min-height: 0;
+}
+
+.swap-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  flex-shrink: 0;
+}
+
+.swap-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888888;
+}
+
+.swap-btn:hover {
+  color: #111111;
+  border-color: #111111;
+}
+
+.swap-arrow {
+  color: #cccccc;
+  font-size: 18px;
+}
+
+.action-badge {
+  font-size: 12px;
+  font-weight: 600;
+  background: #f0f0f0;
+  color: #555555;
+  padding: 3px 10px;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+/* --- Loading / Empty states --- */
+.loading-state, .empty-state {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.loading-state p, .empty-state p {
+  font-size: 14px;
+  color: #999999;
+}
+
+.empty-state span {
+  font-weight: 600;
+  color: #111111;
+}
+
+/* --- Responsive: stack on mobile --- */
+@media (max-width: 768px) {
+  .panels {
+    flex-direction: column;
+  }
+  .swap-area {
+    padding: 4px 0;
+  }
+}

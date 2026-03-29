@@ -1,0 +1,82 @@
+/* ===== Output Panel ===== */
+
+.output-cards {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.output-cards-row {
+  display: flex;
+  gap: 10px;
+}
+
+.info-card {
+  flex: 1;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.info-card-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+  background: #111111;
+}
+
+.info-card-value {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px;
+  color: #111111;
+}
+
+.output-explanation {
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.output-suggestions {
+  padding: 12px;
+  border-top: 1px solid #e5e5e5;
+  background: #fafafa;
+}
+
+.output-suggestions-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.output-suggestions p {
+  font-size: 13px;
+  color: #333333;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* --- Output layout helpers --- */
+.output-full-height {
+  height: 100%;
+}
+
+.output-flex-col {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.output-editor-area {
+  flex: 1;
+  min-height: 0;
+}
